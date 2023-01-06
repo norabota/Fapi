@@ -2,6 +2,7 @@ import logging
 from aiogram import Bot, Dispatcher, executor, types
 import config
 import markups as nav
+import json
 
 logging.basicConfig(level=logging.INFO)
 
@@ -19,21 +20,18 @@ async def command_start(message: types.Message):
                            reply_markup=nav.mainMenu)
 
 
+with open('data_file.json', "r") as file:
+    data = json.load(file)
+
+
 @dp.message_handler()
 async def bot_message(message: types.Message):
-    for key, value in nav.dict_buttons_Contacts.items():
-        if message.text == key:
-            await bot.send_message(message.from_user.id, f'{value}', reply_markup=nav.contactsMenu)
-    for key, value in nav.dict_buttons_Products.items():
-        if message.text == key:
-            await bot.send_message(message.from_user.id, f'{value}', reply_markup=nav.productsMenu)
-    for key, value in nav.dict_buttons_Download.items():
-        if message.text == key:
-            await bot.send_message(message.from_user.id, f'{value}', reply_markup=nav.downloadMenu)
-    if message.text == 'Главное меню':
-        await bot.send_message(message.from_user.id, 'Главное меню', reply_markup=nav.mainMenu)
+    key = data.get(message.text)
+    ss = key["markup"]
+
+    await bot.send_message(message.from_user.id, f'{key["answer"]}', reply_markup=nav.mainMenu)
     if message.text not in nav.ollMenu:
-        await message.reply('Выберите пункт меню')
+        await message.reply('Выберите пункт меню...')
 
 
 if __name__ == '__main__':
