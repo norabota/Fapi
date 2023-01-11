@@ -7,16 +7,25 @@
         "answer": "Главное меню",
         "items": [
           {
-            "id": "mainMenu_products",
-            "description": "Продукты"
+            "menuItem": {
+              "id": "mainMenu_products",
+              "description": "Продукты",
+              "items": null
+            }
           },
           {
-            "id": "mainMenu_downloads",
-            "description": "Скачать бесплатно"
+            "menuItem": {
+              "id": "mainMenu_downloads",
+              "description": "Скачать бесплатно",
+              "items": null
+            }
           },
           {
-            "id": "mainMenu_contacts",
-            "description": "Контакты"
+            "menuItem": {
+              "id": "mainMenu_contacts",
+              "description": "Контакты",
+              "items": null
+            }
           }
         ]
       }
@@ -28,48 +37,81 @@
         "answer": "Вы перешли в меню 'Продукты'",
         "items": [
           {
-            "id": "mainMenu_products_1",
-            "description": "База кроссов FAPI"
+            "menuItem": {
+              "id": "mainMenu_products_1",
+              "description": "База кроссов FAPI",
+              "items": [{"menuItem": {"id": "baza_1","description": "База 1", "answer": "Вы перешли в меню 'База 1'","items": null}}]
+            }
           },
           {
-            "id": "mainMenu_products_2",
-            "description": "Каталог  по маркам"
+            "menuItem": {
+              "id": "mainMenu_products_2",
+              "description": "Каталог  по маркам",
+              "items": null
+            }
           },
           {
-            "id": "mainMenu_products_3",
-            "description": "База фото автозапчастей"
+            "menuItem": {
+              "id": "mainMenu_products_3",
+              "description": "База фото автозапчастей",
+              "items": null
+            }
           },
           {
-            "id": "mainMenu_products_4",
-            "description": "Штрих-коды автозапчастей"
+            "menuItem": {
+              "id": "mainMenu_products_4",
+              "description": "Штрих-коды автозапчастей",
+              "items": null
+            }
           },
           {
-            "id": "mainMenu_products_5",
-            "description": "База артикулов автозапчастей"
+            "menuItem": {
+              "id": "mainMenu_products_5",
+              "description": "База артикулов автозапчастей",
+              "items": null
+            }
           },
           {
-            "id": "mainMenu_products_6",
-            "description": "1С: Автобизнес"
+            "menuItem": {
+              "id": "mainMenu_products_6",
+              "description": "1С: Автобизнес",
+              "items": null
+            }
           },
           {
-            "id": "mainMenu_products_7",
-            "description": "API интеграция"
+            "menuItem": {
+              "id": "mainMenu_products_7",
+              "description": "API интеграция",
+              "items": null
+            }
           },
           {
-            "id": "mainMenu_products_8",
-            "description": "База кроссов онлайн"
+            "menuItem": {
+              "id": "mainMenu_products_8",
+              "description": "База кроссов онлайн",
+              "items": null
+            }
           },
           {
-            "id": "mainMenu_products_9",
-            "description": "База автовладельцев ВКонтакте"
+            "menuItem": {
+              "id": "mainMenu_products_9",
+              "description": "База автовладельцев ВКонтакте",
+              "items": null
+            }
           },
           {
-            "id": "mainMenu_products_10",
-            "description": "Фото логотипов автомобилей"
+            "menuItem": {
+              "id": "mainMenu_products_10",
+              "description": "Фото логотипов автомобилей",
+              "items": null
+            }
           },
           {
-            "id": "mainMenu",
-            "description": "Главное меню"
+            "menuItem": {
+              "id": "products_mainMenu",
+              "description": "Главное меню",
+              "items": null
+            }
           }
         ]
       }
@@ -81,12 +123,18 @@
         "answer": "Вы перешли в меню 'Скачать бесплатно'",
         "items": [
           {
-            "id": "downloadsMenu_free",
-            "description": "Ссылки для скачивания"
+            "menuItem": {
+              "id": "downloadsMenu_free",
+              "description": "Ссылки для скачивания",
+              "items": null
+            }
           },
           {
-            "id": "mainMenu",
-            "description": "Главное меню"
+            "menuItem": {
+              "id": "downloads_mainMenu",
+              "description": "Главное меню",
+              "items": null
+            }
           }
         ]
       }
@@ -98,12 +146,18 @@
         "answer": "Вы перешли в меню 'Контакты'",
         "items": [
           {
-            "id": "contactsMenu_email",
-            "description": "Email"
+            "menuItem": {
+              "id": "contactsMenu_email",
+              "description": "Email",
+              "items": null
+            }
           },
           {
-            "id": "mainMenu",
-            "description": "Главное меню"
+            "menuItem": {
+              "id": "contacts_mainMenu",
+              "description": "Главное меню",
+              "items": null
+            }
           }
         ]
       }

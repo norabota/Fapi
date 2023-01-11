@@ -22,13 +22,13 @@ async def command_start(message: types.Message):
 
 @dp.message_handler()
 async def bot_message(message: types.Message):
-    if message.text  in nav.allMenu:
+    if message.text in nav.allMenu:
         markup_menu = nav.menu_id(message.text)
+        print(type(markup_menu))
         await bot.send_message(message.from_user.id, f'{markup_menu[0]}', reply_markup=markup_menu[1])
     else:
         await message.reply('Выберите пункт меню...')
-        # markup_menu = nav.menu_id(message.text)
-        # await bot.send_message(message.from_user.id, f'{markup_menu[0]}', reply_markup=markup_menu[1])
+
 
 
 if __name__ == '__main__':
