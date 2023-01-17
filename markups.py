@@ -3,6 +3,7 @@ import json
 
 with open('data_file.json', "r", encoding="utf-8") as file:
     data = json.load(file)
+print(data)
 
 allMenu = ['База кроссов FAPI', 'Каталог  по маркам', 'База фото автозапчастей', 'Штрих-коды автозапчастей',
            'База артикулов автозапчастей', '1С: Автобизнес', 'API интеграция', 'База кроссов онлайн',
@@ -35,15 +36,17 @@ def memu_id_id(msg, items_msg_menu):
         if i["menuItem"]["description"] == msg:
             # and i["menuItem"].get("items") is not None
             print(i)
-            print(i["menuItem"].get("items"))
+            print(i["menuItem"].get("menuItems"))
             msg_answer = i["menuItem"]["answer"]
-            for key in i["menuItem"]["items"]:
+            for key in i["menuItem"]["menuItems"]:
                 list_buttons.append(key["menuItem"]["description"])
             return [msg_answer, ReplyKeyboardMarkup(resize_keyboard=True).add(*list_buttons)]
         else:
-            for ints in range(len(items_msg_menu)):
-                if items_msg_menu[ints]["menuItem"]["items"] == type(list):
-                    memu_id_id(msg, items_msg_menu[ints]["menuItem"]["items"])
+            return memu_id_id(msg, i["menuItem"]["menuItems"])
+
+            # for ints in range(len(i["menuItem"]["menuItems"])):
+            #     if items_msg_menu[ints]["menuItem"]["menuItems"] == type(list):
+            #         memu_id_id(msg, items_msg_menu[ints]["menuItem"]["menuItems"])
 
 
     # for i in items_msg_menu:
@@ -72,7 +75,7 @@ def menu_id(msg):
     # Перебор словаря, создание клавиатуры меню
     list_buttons = []
     if msg == data["menu"][0]["menuItem"]["description"] or msg == 'start':
-        items_main_menu = data["menu"][0]["menuItem"]["items"]
+        items_main_menu = data["menu"][0]["menuItem"]["menuItems"]
         msg_answer = data["menu"][0]["menuItem"]["answer"]
         for i in items_main_menu:
             list_buttons.append(i["menuItem"]["description"])

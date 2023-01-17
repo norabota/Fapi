@@ -5,158 +5,147 @@
         "id": "mainMenu",
         "description": "Главное меню",
         "answer": "Главное меню",
-        "items": [
+        "menuItems": [
           {
             "menuItem": {
-              "id": "mainMenu_products",
+              "id": "productsMenu",
               "description": "Продукты",
-              "items": null
+              "answer": "Вы перешли в меню 'Продукты'",
+              "menuItems": [
+                {
+                  "menuItem": {
+                    "id": "mainMenu_products_1",
+                    "answer": "Вы перешли в меню 'База кроссов FAPI'",
+                    "description": "База кроссов FAPI",
+                    "menuItems": [
+                      {
+                        "menuItem": {
+                          "id": "baza_1",
+                          "description": "База 1",
+                          "answer": "Вы перешли в меню 'База 1'",
+                          "menuItems": null
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "menuItem": {
+                    "id": "mainMenu_products_2",
+                    "description": "Каталог  по маркам",
+                    "menuItems": null
+                  }
+                },
+                {
+                  "menuItem": {
+                    "id": "mainMenu_products_3",
+                    "description": "База фото автозапчастей",
+                    "menuItems": null
+                  }
+                },
+                {
+                  "menuItem": {
+                    "id": "mainMenu_products_4",
+                    "description": "Штрих-коды автозапчастей",
+                    "menuItems": null
+                  }
+                },
+                {
+                  "menuItem": {
+                    "id": "mainMenu_products_5",
+                    "description": "База артикулов автозапчастей",
+                    "menuItems": null
+                  }
+                },
+                {
+                  "menuItem": {
+                    "id": "mainMenu_products_6",
+                    "description": "1С: Автобизнес",
+                    "menuItems": null
+                  }
+                },
+                {
+                  "menuItem": {
+                    "id": "mainMenu_products_7",
+                    "description": "API интеграция",
+                    "menuItems": null
+                  }
+                },
+                {
+                  "menuItem": {
+                    "id": "mainMenu_products_8",
+                    "description": "База кроссов онлайн",
+                    "menuItems": null
+                  }
+                },
+                {
+                  "menuItem": {
+                    "id": "mainMenu_products_9",
+                    "description": "База автовладельцев ВКонтакте",
+                    "menuItems": null
+                  }
+                },
+                {
+                  "menuItem": {
+                    "id": "mainMenu_products_10",
+                    "description": "Фото логотипов автомобилей",
+                    "menuItems": null
+                  }
+                },
+                {
+                  "menuItem": {
+                    "id": "products_mainMenu",
+                    "description": "Главное меню",
+                    "menuItems": null
+                  }
+                }
+              ]
             }
           },
           {
             "menuItem": {
-              "id": "mainMenu_downloads",
+              "id": "downloadsMenu",
               "description": "Скачать бесплатно",
-              "items": null
+              "answer": "Вы перешли в меню 'Скачать бесплатно'",
+              "menuItems": [
+                {
+                  "menuItem": {
+                    "id": "downloadsMenu_free",
+                    "description": "Ссылки для скачивания",
+                    "menuItems": null
+                  }
+                },
+                {
+                  "menuItem": {
+                    "id": "downloads_mainMenu",
+                    "description": "Главное меню",
+                    "menuItems": null
+                  }
+                }
+              ]
             }
           },
           {
             "menuItem": {
-              "id": "mainMenu_contacts",
+              "id": "contactsMenu",
               "description": "Контакты",
-              "items": null
-            }
-          }
-        ]
-      }
-    },
-    {
-      "menuItem": {
-        "id": "productsMenu",
-        "description": "Продукты",
-        "answer": "Вы перешли в меню 'Продукты'",
-        "items": [
-          {
-            "menuItem": {
-              "id": "mainMenu_products_1",
-              "description": "База кроссов FAPI",
-              "items": [{"menuItem": {"id": "baza_1","description": "База 1", "answer": "Вы перешли в меню 'База 1'","items": null}}]
-            }
-          },
-          {
-            "menuItem": {
-              "id": "mainMenu_products_2",
-              "description": "Каталог  по маркам",
-              "items": null
-            }
-          },
-          {
-            "menuItem": {
-              "id": "mainMenu_products_3",
-              "description": "База фото автозапчастей",
-              "items": null
-            }
-          },
-          {
-            "menuItem": {
-              "id": "mainMenu_products_4",
-              "description": "Штрих-коды автозапчастей",
-              "items": null
-            }
-          },
-          {
-            "menuItem": {
-              "id": "mainMenu_products_5",
-              "description": "База артикулов автозапчастей",
-              "items": null
-            }
-          },
-          {
-            "menuItem": {
-              "id": "mainMenu_products_6",
-              "description": "1С: Автобизнес",
-              "items": null
-            }
-          },
-          {
-            "menuItem": {
-              "id": "mainMenu_products_7",
-              "description": "API интеграция",
-              "items": null
-            }
-          },
-          {
-            "menuItem": {
-              "id": "mainMenu_products_8",
-              "description": "База кроссов онлайн",
-              "items": null
-            }
-          },
-          {
-            "menuItem": {
-              "id": "mainMenu_products_9",
-              "description": "База автовладельцев ВКонтакте",
-              "items": null
-            }
-          },
-          {
-            "menuItem": {
-              "id": "mainMenu_products_10",
-              "description": "Фото логотипов автомобилей",
-              "items": null
-            }
-          },
-          {
-            "menuItem": {
-              "id": "products_mainMenu",
-              "description": "Главное меню",
-              "items": null
-            }
-          }
-        ]
-      }
-    },
-    {
-      "menuItem": {
-        "id": "downloadsMenu",
-        "description": "Скачать бесплатно",
-        "answer": "Вы перешли в меню 'Скачать бесплатно'",
-        "items": [
-          {
-            "menuItem": {
-              "id": "downloadsMenu_free",
-              "description": "Ссылки для скачивания",
-              "items": null
-            }
-          },
-          {
-            "menuItem": {
-              "id": "downloads_mainMenu",
-              "description": "Главное меню",
-              "items": null
-            }
-          }
-        ]
-      }
-    },
-    {
-      "menuItem": {
-        "id": "contactsMenu",
-        "description": "Контакты",
-        "answer": "Вы перешли в меню 'Контакты'",
-        "items": [
-          {
-            "menuItem": {
-              "id": "contactsMenu_email",
-              "description": "Email",
-              "items": null
-            }
-          },
-          {
-            "menuItem": {
-              "id": "contacts_mainMenu",
-              "description": "Главное меню",
-              "items": null
+              "answer": "Вы перешли в меню 'Контакты'",
+              "menuItems": [
+                {
+                  "menuItem": {
+                    "id": "contactsMenu_email",
+                    "description": "Email",
+                    "menuItems": null
+                  }
+                },
+                {
+                  "menuItem": {
+                    "id": "contacts_mainMenu",
+                    "description": "Главное меню",
+                    "menuItems": null
+                  }
+                }
+              ]
             }
           }
         ]
