@@ -33,6 +33,7 @@
                   "menuItem": {
                     "id": "mainMenu_products_2",
                     "description": "Каталог  по маркам",
+                    "answer": "Вы перешли в меню 'Каталог  по маркам'",
                     "menuItems": null
                   }
                 },
@@ -40,6 +41,7 @@
                   "menuItem": {
                     "id": "mainMenu_products_3",
                     "description": "База фото автозапчастей",
+                    "answer": "Вы перешли в меню 'База фото автозапчастей'",
                     "menuItems": null
                   }
                 },
@@ -47,6 +49,7 @@
                   "menuItem": {
                     "id": "mainMenu_products_4",
                     "description": "Штрих-коды автозапчастей",
+                    "answer": "Вы перешли в меню 'Штрих-коды автозапчастей'",
                     "menuItems": null
                   }
                 },
@@ -54,6 +57,7 @@
                   "menuItem": {
                     "id": "mainMenu_products_5",
                     "description": "База артикулов автозапчастей",
+                    "answer": "Вы перешли в меню 'База артикулов автозапчастей'",
                     "menuItems": null
                   }
                 },
@@ -61,6 +65,7 @@
                   "menuItem": {
                     "id": "mainMenu_products_6",
                     "description": "1С: Автобизнес",
+                    "answer": "Вы перешли в меню '1С: Автобизнес'",
                     "menuItems": null
                   }
                 },
@@ -68,6 +73,7 @@
                   "menuItem": {
                     "id": "mainMenu_products_7",
                     "description": "API интеграция",
+                    "answer": "Вы перешли в меню 'API интеграция'",
                     "menuItems": null
                   }
                 },
@@ -75,6 +81,7 @@
                   "menuItem": {
                     "id": "mainMenu_products_8",
                     "description": "База кроссов онлайн",
+                    "answer": "Вы перешли в меню 'База кроссов онлайн'",
                     "menuItems": null
                   }
                 },
@@ -82,6 +89,7 @@
                   "menuItem": {
                     "id": "mainMenu_products_9",
                     "description": "База автовладельцев ВКонтакте",
+                    "answer": "Вы перешли в меню 'База автовладельцев ВКонтакте'",
                     "menuItems": null
                   }
                 },
@@ -89,6 +97,7 @@
                   "menuItem": {
                     "id": "mainMenu_products_10",
                     "description": "Фото логотипов автомобилей",
+                    "answer": "Вы перешли в меню 'Фото логотипов автомобилей'",
                     "menuItems": null
                   }
                 },
@@ -96,6 +105,7 @@
                   "menuItem": {
                     "id": "products_mainMenu",
                     "description": "Главное меню",
+                    "answer": "Вы перешли в меню 'Главное меню'",
                     "menuItems": null
                   }
                 }
@@ -112,6 +122,7 @@
                   "menuItem": {
                     "id": "downloadsMenu_free",
                     "description": "Ссылки для скачивания",
+                    "answer": "Вы перешли в меню 'Ссылки для скачивания'",
                     "menuItems": null
                   }
                 },
@@ -119,6 +130,7 @@
                   "menuItem": {
                     "id": "downloads_mainMenu",
                     "description": "Главное меню",
+                    "answer": "Вы перешли в меню 'Главное меню'",
                     "menuItems": null
                   }
                 }
@@ -134,6 +146,7 @@
                 {
                   "menuItem": {
                     "id": "contactsMenu_email",
+                    "answer": "Вы перешли в меню 'contactsMenu_email'",
                     "description": "Email",
                     "menuItems": null
                   }
@@ -142,6 +155,7 @@
                   "menuItem": {
                     "id": "contacts_mainMenu",
                     "description": "Главное меню",
+                    "answer": "Вы перешли в меню 'Главное меню'",
                     "menuItems": null
                   }
                 }
