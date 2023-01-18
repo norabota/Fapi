@@ -20,20 +20,24 @@ def menu_commands(msg):
         return [msg_answer, ReplyKeyboardMarkup(resize_keyboard=True).add(*list_buttons)]
 
 
+
 def menu_id(msg, submenu_with_msg=data["menu"]):
     list_buttons = []
     print(1, submenu_with_msg)
     for i in submenu_with_msg:
-        if i["menuItem"]["description"] == msg:
+        if i["menuItem"]["menuItems"] == []:
+            continue
+        elif i["menuItem"]["description"] == msg:
             print(2, i)
             print(3, i["menuItem"].get("menuItems"))
             msg_answer = i["menuItem"]["answer"]
             for key in i["menuItem"]["menuItems"]:
                 list_buttons.append(key["menuItem"]["description"])
             return [msg_answer, ReplyKeyboardMarkup(resize_keyboard=True).add(*list_buttons)]
-        # elif i["menuItem"]["description"] == msg and i["menuItem"]["menuItems"] is type(None):
-        #     return ["Раздел меню сейчас в разработке-выберите другой пункт меню;))", None]
-        # elif i["menuItem"]["description"] != msg and i["menuItem"]["menuItems"] is type(None):
-        #     continue
         else:
-            return menu_id(msg, i["menuItem"]["menuItems"])
+            ss = menu_id(msg, i["menuItem"]["menuItems"])
+            if ss != False:
+                return ss
+    return False
+
+

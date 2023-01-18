@@ -22,15 +22,13 @@ async def command_start(message: types.Message):
 
 @dp.message_handler()
 async def bot_message(message: types.Message):
-    if message.text in nav.allMenu:
-        markup_menu = nav.menu_id(message.text)
-        # if markup_menu[1] is None:
-        #     await bot.send_message(message.from_user.id, f'{markup_menu[0]}')
-        print(66,type(markup_menu))
-        print(67,markup_menu)
-        await bot.send_message(message.from_user.id, f'{markup_menu[0]}', reply_markup=markup_menu[1])
-    else:
+    markup_menu = nav.menu_id(message.text)
+    print(66,type(markup_menu))
+    print(67,markup_menu)
+    if markup_menu is None:
         await message.reply('Выберите пункт меню...')
+    else:
+        await bot.send_message(message.from_user.id, f'{markup_menu[0]}', reply_markup=markup_menu[1])
 
 
 
