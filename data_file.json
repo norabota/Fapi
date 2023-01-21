@@ -145,10 +145,11 @@
               "menuItems": [
                 {
                   "menuItem": {
-                    "id": "contactsMenu_email",
-                    "answer": "Вы перешли в меню 'contactsMenu_email'",
-                    "description": "Email",
-                    "menuItems": []
+                    "id": "contactsMenu_links",
+                    "answer": "Вы перешли в меню 'Ссылки'",
+                    "description": "Ссылки",
+                    "menuItems": [],
+                    "links": {"Email": "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=fapi@iisis.ru","Telegram": "https://t.me/FapiSoftWare"}
                   }
                 },
                 {
