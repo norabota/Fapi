@@ -34,7 +34,26 @@
                     "id": "mainMenu_products_2",
                     "description": "Каталог  по маркам",
                     "answer": "Вы перешли в меню 'Каталог  по маркам'",
-                    "menuItems": []
+                    "menuItems": [
+                      {
+                        "menuItem": {
+                          "id": "baza_2",
+                          "description": "Параметры каталога автозапчастей",
+                          "answer": "Каталог автозапчастей по марке автомобиля",
+                          "callback_data": "baza_2",
+                          "menuItems": []
+                        }
+                      },
+                      {
+                        "menuItem": {
+                          "id": "payment_2",
+                          "description": "Оплата",
+                          "answer": "Каталог автозапчастей по марке автомобиля",
+                          "callback_data": "payment_2",
+                          "menuItems": []
+                        }
+                      }
+                    ]
                   }
                 },
                 {
@@ -123,6 +142,9 @@
                     "id": "downloadsMenu_free",
                     "description": "Ссылки для скачивания",
                     "answer": "Вы перешли в меню 'Ссылки для скачивания'",
+                    "links": {
+                      "Ссылка 1": "https://disk.yandex.ru/d/8IZDYbLCVxtahA"
+                    },
                     "menuItems": []
                   }
                 },
@@ -149,7 +171,13 @@
                     "answer": "Вы перешли в меню 'Ссылки'",
                     "description": "Ссылки",
                     "menuItems": [],
-                    "links": {"Email": "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=fapi@iisis.ru","Telegram": "https://t.me/FapiSoftWare"}
+                    "links": {
+                      "Email": "mailto:fapi@iisis.ru",
+                      "Telegram": "https://t.me/FapiSoftWare",
+                      "Skype": "https://join.skype.com/invite/odNlcw7RXIWj",
+                      "WhatsApp": "https://wa.me/79968004137",
+                      "Viber": "https://msng.link/o/?79968004137=vi"
+                    }
                   }
                 },
                 {

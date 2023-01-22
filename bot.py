@@ -23,19 +23,22 @@ async def command_start(message: types.Message):
 @dp.message_handler()
 async def bot_message(message: types.Message):
     markup_menu = nav.menu_id(message.text)
-    inline_markup_menu = inav.menu_id_links(message.text)
-    print(65, inline_markup_menu)
-    print(655, inline_markup_menu["submenu"]["inline_keyboard"])
+    inline_links_menu = inav.menu_id_links(message.text)
+    inline_callback_menu = inav.menu_inline(message.text)
+    print(99, inline_callback_menu)
+    print(65, inline_links_menu)
     print(66, type(markup_menu))
     print(67, markup_menu)
     # if markup_menu is False:
     #     await message.reply(
     #         'Выбранный  пункт меню сейчас в разработке, выберите другой пункт меню из предложенной клавиатуры')
-    if markup_menu is False and inline_markup_menu["submenu"] != []:
-        await message.answer("guyguyfyfyfy", reply_markup=inline_markup_menu["submenu"])
-    else:
+    if inline_links_menu is not False:
+        await message.answer("Перейдите по ссылке", reply_markup=inline_links_menu["submenu"])
+    if markup_menu is not False:
         await bot.send_message(message.from_user.id, f'{markup_menu["answer"]}', reply_markup=markup_menu["submenu"])
-
+    if markup_menu is False and inline_links_menu is False:
+        await message.reply(
+            'Выбранный  пункт меню сейчас в разработке, выберите другой пункт меню из предложенной клавиатуры')
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True, on_startup=on_startup)
