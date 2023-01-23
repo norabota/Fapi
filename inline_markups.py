@@ -34,21 +34,21 @@ def menu_inline(msg, submenu_with_msg=data["menu"]):
     list_buttons = []
     print(1, submenu_with_msg)
     for i in submenu_with_msg:
-        # if i["menuItem"]["menuItems"] == []:
-        #     print("TEST")
-        #     continue
         if i["menuItem"]["description"] == msg:
             print(2, i)
             print(3, i["menuItem"].get("menuItems"))
             msg_answer = i["menuItem"]["answer"]
-            list_buttons = [
-                InlineKeyboardButton(text=key["menuItem"]["description"], callback_data=key["menuItem"]["callback_data"])
-                for key in i["menuItem"]["menuItems"] if "callback_data" in key["menuItem"]]
-            # for key in i["menuItem"]["menuItems"]:
-            #     list_buttons = [InlineKeyboardButton(text=key["menuItem"]["description"], callback_data=key["menuItem"]["description"]) for key in i["menuItem"]["menuItems"] if "callback_data" in key["menuItem"]]
-            #     if "callback_data" in key["menuItem"]:
-            #     list_buttons.append([text=key["menuItem"]["description"], callback_data=key["menuItem"]["description"]])
-            return {"answer": msg_answer, "submenu": InlineKeyboardMarkup(row_width=2).add(*list_buttons)}
+            # list_buttons = [
+            #     InlineKeyboardButton(text=key["menuItem"]["description"], callback_data=key["menuItem"]["callback_data"])
+            #     for key in i["menuItem"]["menuItems"] if "callback_data" in key["menuItem"]]
+
+            for key in i["menuItem"]["menuItems"]:
+                if key["menuItem"].get("callback_data", 0):
+                    b = InlineKeyboardButton(text=key["menuItem"]["description"],
+                                         callback_data=key["menuItem"]["callback_data"])
+                    list_buttons.append(b)
+            if list_buttons:
+                return {"answer": msg_answer, "submenu": InlineKeyboardMarkup(row_width=1).add(*list_buttons)}
         else:
             answer_submenu = menu_inline(msg, i["menuItem"]["menuItems"])
             if not answer_submenu == False:
@@ -56,9 +56,9 @@ def menu_inline(msg, submenu_with_msg=data["menu"]):
     return False
 
 
-# кнопки из списка
-l = ['Яблоко', 'Груша']
-keyboard = InlineKeyboardMarkup(row_width=1)
-backbutton = InlineKeyboardButton(text="Back", callback_data="MainMenu")
-button_list = [InlineKeyboardButton(text=x, callback_data=x) for x in l]
-keyboard.add(*button_list, backbutton)
+# # кнопки из списка
+# l = ['Яблоко', 'Груша']
+# keyboard = InlineKeyboardMarkup(row_width=1)
+# backbutton = InlineKeyboardButton(text="Back", callback_data="MainMenu")
+# button_list = [InlineKeyboardButton(text=x, callback_data=x) for x in l]
+# keyboard.add(*button_list, backbutton)

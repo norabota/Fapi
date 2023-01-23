@@ -27,15 +27,14 @@ def menu_id(msg, submenu_with_msg=data["menu"]):
     print(1, submenu_with_msg)
     for i in submenu_with_msg:
         if i["menuItem"]["menuItems"] == []:
-            print("TEST")
             continue
         elif i["menuItem"]["description"] == msg:
-            print(2, i)
-            print(3, i["menuItem"].get("menuItems"))
             msg_answer = i["menuItem"]["answer"]
             for key in i["menuItem"]["menuItems"]:
-                list_buttons.append(key["menuItem"]["description"])
-            return {"answer": msg_answer, "submenu": ReplyKeyboardMarkup(resize_keyboard=True).add(*list_buttons)}
+                if not key["menuItem"].get("callback_data", 0):
+                    list_buttons.append(key["menuItem"]["description"])
+            if list_buttons:
+                return {"answer": msg_answer, "submenu": ReplyKeyboardMarkup(resize_keyboard=True).add(*list_buttons)}
         else:
             answer_submenu = menu_id(msg, i["menuItem"]["menuItems"])
             if answer_submenu != False:

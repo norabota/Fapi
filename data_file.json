@@ -37,7 +37,7 @@
                     "menuItems": [
                       {
                         "menuItem": {
-                          "id": "baza_2",
+                          "id": "inline_baza_2",
                           "description": "Параметры каталога автозапчастей",
                           "answer": "Каталог автозапчастей по марке автомобиля",
                           "callback_data": "baza_2",
@@ -46,10 +46,26 @@
                       },
                       {
                         "menuItem": {
-                          "id": "payment_2",
+                          "id": "inline_payment_2",
                           "description": "Оплата",
                           "answer": "Каталог автозапчастей по марке автомобиля",
                           "callback_data": "payment_2",
+                          "menuItems": []
+                        }
+                      },
+                      {
+                        "menuItem": {
+                          "id": "productsMenu",
+                          "description": "Продукты",
+                          "answer": "Вы перешли в меню 'Продукты'",
+                          "menuItems": []
+                        }
+                      },
+                      {
+                        "menuItem": {
+                          "id": "mainMenu",
+                          "description":  "Главное меню",
+                          "answer": "Вы перешли в меню 'Главное меню'",
                           "menuItems": []
                         }
                       }

@@ -27,16 +27,14 @@ async def bot_message(message: types.Message):
     inline_callback_menu = inav.menu_inline(message.text)
     print(99, inline_callback_menu)
     print(65, inline_links_menu)
-    print(66, type(markup_menu))
     print(67, markup_menu)
-    # if markup_menu is False:
-    #     await message.reply(
-    #         'Выбранный  пункт меню сейчас в разработке, выберите другой пункт меню из предложенной клавиатуры')
-    if inline_links_menu is not False:
+    if inline_links_menu :
         await message.answer("Перейдите по ссылке", reply_markup=inline_links_menu["submenu"])
-    if markup_menu is not False:
+    if markup_menu :
         await bot.send_message(message.from_user.id, f'{markup_menu["answer"]}', reply_markup=markup_menu["submenu"])
-    if markup_menu is False and inline_links_menu is False:
+    if inline_callback_menu:
+        await message.answer(f'{inline_callback_menu["answer"]}', reply_markup=inline_callback_menu["submenu"])
+    if markup_menu is False and inline_links_menu is False and inline_callback_menu is False:
         await message.reply(
             'Выбранный  пункт меню сейчас в разработке, выберите другой пункт меню из предложенной клавиатуры')
 
