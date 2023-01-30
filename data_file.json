@@ -4,25 +4,29 @@
       "menuItem": {
         "id": "mainMenu",
         "description": "Главное меню",
-        "answer": "Главное меню",
+        "answer": "*Главное меню*",
+        "callback_data": "main",
         "menuItems": [
           {
             "menuItem": {
               "id": "productsMenu",
               "description": "Продукты",
-              "answer": "Вы перешли в меню 'Продукты'",
+              "answer": "Вы ||ffff|| перешли *в меню* 'Продукты'",
+              "callback_data": "products",
               "menuItems": [
                 {
                   "menuItem": {
-                    "id": "mainMenu_products_1",
+                    "id": "products_product_1",
                     "answer": "Вы перешли в меню 'База кроссов FAPI'",
+                    "callback_data": "product_1",
                     "description": "База кроссов FAPI",
                     "menuItems": [
                       {
                         "menuItem": {
-                          "id": "baza_1",
+                          "id": "product_1_baza_1",
                           "description": "База 1",
                           "answer": "Вы перешли в меню 'База 1'",
+                          "callback_data": "baza_1",
                           "menuItems": []
                         }
                       }
@@ -31,13 +35,14 @@
                 },
                 {
                   "menuItem": {
-                    "id": "mainMenu_products_2",
+                    "id": "products_product_2",
                     "description": "Каталог  по маркам",
                     "answer": "Вы перешли в меню 'Каталог  по маркам'",
+                    "callback_data": "product_2",
                     "menuItems": [
                       {
                         "menuItem": {
-                          "id": "inline_baza_2",
+                          "id": "product_2_baza_2",
                           "description": "Параметры каталога автозапчастей",
                           "answer": "Каталог автозапчастей по марке автомобиля",
                           "callback_data": "baza_2",
@@ -46,7 +51,7 @@
                       },
                       {
                         "menuItem": {
-                          "id": "inline_payment_2",
+                          "id": "product_2_payment_2",
                           "description": "Оплата",
                           "answer": "Каталог автозапчастей по марке автомобиля",
                           "callback_data": "payment_2",
@@ -58,14 +63,16 @@
                           "id": "productsMenu",
                           "description": "Продукты",
                           "answer": "Вы перешли в меню 'Продукты'",
+                          "callback_data": "products",
                           "menuItems": []
                         }
                       },
                       {
                         "menuItem": {
                           "id": "mainMenu",
-                          "description":  "Главное меню",
+                          "description": "Главное меню",
                           "answer": "Вы перешли в меню 'Главное меню'",
+                          "callback_data": "main",
                           "menuItems": []
                         }
                       }
@@ -74,65 +81,73 @@
                 },
                 {
                   "menuItem": {
-                    "id": "mainMenu_products_3",
+                    "id": "products_product_3",
                     "description": "База фото автозапчастей",
                     "answer": "Вы перешли в меню 'База фото автозапчастей'",
+                    "callback_data": "product_3",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "mainMenu_products_4",
+                    "id": "products_product_4",
                     "description": "Штрих-коды автозапчастей",
                     "answer": "Вы перешли в меню 'Штрих-коды автозапчастей'",
+                    "callback_data": "product_4",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "mainMenu_products_5",
+                    "id": "products_product_5",
                     "description": "База артикулов автозапчастей",
                     "answer": "Вы перешли в меню 'База артикулов автозапчастей'",
+                    "callback_data": "product_5",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "mainMenu_products_6",
+                    "id": "products_product_6",
                     "description": "1С: Автобизнес",
                     "answer": "Вы перешли в меню '1С: Автобизнес'",
+                    "callback_data": "product_6",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "mainMenu_products_7",
+                    "id": "products_product_7",
                     "description": "API интеграция",
                     "answer": "Вы перешли в меню 'API интеграция'",
+                    "callback_data": "product_7",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "mainMenu_products_8",
+                    "id": "products_product_8",
                     "description": "База кроссов онлайн",
                     "answer": "Вы перешли в меню 'База кроссов онлайн'",
+                    "callback_data": "product_8",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "mainMenu_products_9",
+                    "id": "products_product_9",
                     "description": "База автовладельцев ВКонтакте",
                     "answer": "Вы перешли в меню 'База автовладельцев ВКонтакте'",
+                    "callback_data": "product_9",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "mainMenu_products_10",
+                    "id": "products_product_10",
                     "description": "Фото логотипов автомобилей",
                     "answer": "Вы перешли в меню 'Фото логотипов автомобилей'",
+                    "callback_data": "product_10",
                     "menuItems": []
                   }
                 },
@@ -141,6 +156,7 @@
                     "id": "products_mainMenu",
                     "description": "Главное меню",
                     "answer": "Вы перешли в меню 'Главное меню'",
+                    "callback_data": "main",
                     "menuItems": []
                   }
                 }
@@ -152,6 +168,7 @@
               "id": "downloadsMenu",
               "description": "Скачать бесплатно",
               "answer": "Вы перешли в меню 'Скачать бесплатно'",
+              "callback_data": "downloads",
               "menuItems": [
                 {
                   "menuItem": {
@@ -169,6 +186,7 @@
                     "id": "downloads_mainMenu",
                     "description": "Главное меню",
                     "answer": "Вы перешли в меню 'Главное меню'",
+                    "callback_data": "main",
                     "menuItems": []
                   }
                 }
@@ -180,20 +198,60 @@
               "id": "contactsMenu",
               "description": "Контакты",
               "answer": "Вы перешли в меню 'Контакты'",
+              "callback_data": "contacts",
               "menuItems": [
                 {
                   "menuItem": {
-                    "id": "contactsMenu_links",
+                    "id": "contacts_links",
                     "answer": "Вы перешли в меню 'Ссылки'",
+                    "callback_data": "links",
                     "description": "Ссылки",
-                    "menuItems": [],
-                    "links": {
-                      "Email": "mailto:fapi@iisis.ru",
-                      "Telegram": "https://t.me/FapiSoftWare",
-                      "Skype": "https://join.skype.com/invite/odNlcw7RXIWj",
-                      "WhatsApp": "https://wa.me/79968004137",
-                      "Viber": "https://msng.link/o/?79968004137=vi"
-                    }
+                    "menuItems": [
+                      {
+                        "menuItem": {
+                          "id": "link_1",
+                          "description": "<b>Email</b>",
+                          "answer": "1",
+                          "callback_data": "mailto:fapi@iisis.ru",
+                          "menuItems": []
+                        }
+                      },
+                      {
+                        "menuItem": {
+                          "id": "link_2",
+                          "description": "Telegram",
+                          "answer": "2",
+                          "callback_data": "https://t.me/FapiSoftWare",
+                          "menuItems": []
+                        }
+                      },
+                      {
+                        "menuItem": {
+                          "id": "link_3",
+                          "description": "Skype",
+                          "answer": "3",
+                          "callback_data": "https://join.skype.com/invite/odNlcw7RXIWj",
+                          "menuItems": []
+                        }
+                      },
+                      {
+                        "menuItem": {
+                          "id": "link_4",
+                          "description": "WhatsApp",
+                          "answer":  "4",
+                          "callback_data": "https://wa.me/79968004137",
+                          "menuItems": []
+                        }
+                      },{
+                        "menuItem": {
+                          "id": "link_5",
+                          "description": "Viber",
+                          "answer": "5",
+                          "callback_data": "https://msng.link/o/?79968004137=vi",
+                          "menuItems": []
+                        }
+                      }
+                    ]
                   }
                 },
                 {
@@ -201,6 +259,7 @@
                     "id": "contacts_mainMenu",
                     "description": "Главное меню",
                     "answer": "Вы перешли в меню 'Главное меню'",
+                    "callback_data": "main",
                     "menuItems": []
                   }
                 }
