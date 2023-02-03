@@ -18,7 +18,7 @@ async def on_startup(_):
 async def command_start(message: types.Message):
     markup_menu = inav.menu_commands('start')
     print(markup_menu)
-    await bot.send_message(message.from_user.id, '.          Здравствуйте, {0.first_name}!          .'.format(message.from_user),
+    await bot.send_message(message.from_user.id, '.           Здравствуйте, {0.first_name}!         .'.format(message.from_user),
                            reply_markup=markup_menu["submenu"])
 
 

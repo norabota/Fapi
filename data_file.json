@@ -4,7 +4,7 @@
       "menuItem": {
         "id": "mainMenu",
         "description": "Главное меню",
-        "answer": "*Главное меню*",
+        "answer": "*Вы перешли в меню 'Главное меню'*",
         "callback_data": "main",
         "menuItems": [
           {
@@ -17,16 +17,25 @@
                 {
                   "menuItem": {
                     "id": "products_product_1",
-                    "answer": "Вы перешли в меню 'База кроссов FAPI'",
+                    "answer": "База кроссов состоит из базы автозапчастей артикулов оригинальных и неоригинальных запчастей, кросс\\-таблицы связей\\.\n\nБаза необходима для сайтов по продаже автозапчастей, внутренних систем учета \\(1С, собственные разработки\\), CRM\\. Собирается с 2015 года\\.",
                     "callback_data": "product_1",
                     "description": "База кроссов FAPI",
                     "menuItems": [
                       {
                         "menuItem": {
-                          "id": "product_1_baza_1",
-                          "description": "База 1",
+                          "id": "link_product_1_baza_1",
+                          "description": "Подробнее",
                           "answer": "Вы перешли в меню 'База 1'",
-                          "callback_data": "baza_1",
+                          "callback_data": "https://telegra.ph/Baza-krossov-FAPI-02-03",
+                          "menuItems": []
+                        }
+                      },
+                      {
+                        "menuItem": {
+                          "id": "back_1_productsMenu",
+                          "description": "<Назад",
+                          "answer": "Вы перешли в меню 'Продукты'",
+                          "callback_data": "products",
                           "menuItems": []
                         }
                       }
@@ -37,42 +46,24 @@
                   "menuItem": {
                     "id": "products_product_2",
                     "description": "Каталог  по маркам",
-                    "answer": "Вы перешли в меню 'Каталог  по маркам'",
+                    "answer": "Каталог автозапчастей по марке подключен у большинства крупных онлайн\\-ритейлеров: exist\\.ru, emex\\.ru и др\\. Его можно интегрировать не только на сайт, но и в учетные системы\\.\n\nКаталог позволяет подбирать автозапчасти по марке / модели / модификации автомобиля с последующим выводом дерева деталей\\.",
                     "callback_data": "product_2",
                     "menuItems": [
                       {
                         "menuItem": {
-                          "id": "product_2_baza_2",
-                          "description": "Параметры каталога автозапчастей",
-                          "answer": "Каталог автозапчастей по марке автомобиля",
-                          "callback_data": "baza_2",
+                          "id": "link_product_2_baza_2",
+                          "description": "Подробнее",
+                          "answer": "Вы перешли в меню 'База 1'",
+                          "callback_data": "https://telegra.ph/Katalog-avtozapchastej-po-marke-avtomobilya-02-03",
                           "menuItems": []
                         }
                       },
                       {
                         "menuItem": {
-                          "id": "product_2_payment_2",
-                          "description": "Оплата",
-                          "answer": "Каталог автозапчастей по марке автомобиля",
-                          "callback_data": "payment_2",
-                          "menuItems": []
-                        }
-                      },
-                      {
-                        "menuItem": {
-                          "id": "productsMenu",
-                          "description": "Продукты",
+                          "id": "back_2_productsMenu",
+                          "description": "<Назад",
                           "answer": "Вы перешли в меню 'Продукты'",
                           "callback_data": "products",
-                          "menuItems": []
-                        }
-                      },
-                      {
-                        "menuItem": {
-                          "id": "mainMenu",
-                          "description": "Главное меню",
-                          "answer": "Вы перешли в меню 'Главное меню'",
-                          "callback_data": "main",
                           "menuItems": []
                         }
                       }
@@ -153,9 +144,9 @@
                 },
                 {
                   "menuItem": {
-                    "id": "products_mainMenu",
-                    "description": "Главное меню",
-                    "answer": "Вы перешли в меню 'Главное меню'",
+                    "id": "back_products_mainMenu",
+                    "description": "<Назад",
+                    "answer": "Вы перешли в меню 'Продукты'",
                     "callback_data": "main",
                     "menuItems": []
                   }
@@ -167,24 +158,22 @@
             "menuItem": {
               "id": "downloadsMenu",
               "description": "Скачать бесплатно",
-              "answer": "Вы перешли в меню 'Скачать бесплатно'",
+              "answer": "Представленная база кроссов является бесплатной для загрузки\\. Информация собиралась за период с 2014 по 2017гг от производителей, крупных интернет\\-магазинов\\(exist, emex,mikado и др\\), вручную\\.\n\nМы также предоставляем и платную базу с более полной и актуальной информацией на текущую дату\\. Она пополняется каждую неделю\\.",
               "callback_data": "downloads",
               "menuItems": [
                 {
                   "menuItem": {
-                    "id": "downloadsMenu_free",
-                    "description": "Ссылки для скачивания",
-                    "answer": "Вы перешли в меню 'Ссылки для скачивания'",
-                    "links": {
-                      "Ссылка 1": "https://disk.yandex.ru/d/8IZDYbLCVxtahA"
-                    },
+                    "id": "link_d_1",
+                    "description": "Подробнее",
+                    "answer": "1",
+                    "callback_data": "https://telegra.ph/Skachat-bazu-krossov-avtozapchastej-besplatno-02-03",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "downloads_mainMenu",
-                    "description": "Главное меню",
+                    "id": "back_downloads_mainMenu",
+                    "description": "<Назад",
                     "answer": "Вы перешли в меню 'Главное меню'",
                     "callback_data": "main",
                     "menuItems": []
@@ -205,12 +194,12 @@
                     "id": "contacts_links",
                     "answer": "Вы перешли в меню 'Ссылки'",
                     "callback_data": "links",
-                    "description": "Ссылки",
+                    "description": "Email и Мессенджеры",
                     "menuItems": [
                       {
                         "menuItem": {
-                          "id": "link_1",
-                          "description": "<b>Email</b>",
+                          "id": "link_c_1",
+                          "description": "*Email*",
                           "answer": "1",
                           "callback_data": "mailto:fapi@iisis.ru",
                           "menuItems": []
@@ -218,7 +207,7 @@
                       },
                       {
                         "menuItem": {
-                          "id": "link_2",
+                          "id": "link_c_2",
                           "description": "Telegram",
                           "answer": "2",
                           "callback_data": "https://t.me/FapiSoftWare",
@@ -227,7 +216,7 @@
                       },
                       {
                         "menuItem": {
-                          "id": "link_3",
+                          "id": "link_c_3",
                           "description": "Skype",
                           "answer": "3",
                           "callback_data": "https://join.skype.com/invite/odNlcw7RXIWj",
@@ -236,18 +225,28 @@
                       },
                       {
                         "menuItem": {
-                          "id": "link_4",
+                          "id": "link_c_4",
                           "description": "WhatsApp",
-                          "answer":  "4",
+                          "answer": "4",
                           "callback_data": "https://wa.me/79968004137",
                           "menuItems": []
                         }
-                      },{
+                      },
+                      {
                         "menuItem": {
-                          "id": "link_5",
-                          "description": "Viber",
+                          "id": "link_c_5",
+                          "description": "Контакты",
                           "answer": "5",
                           "callback_data": "https://msng.link/o/?79968004137=vi",
+                          "menuItems": []
+                        }
+                      },
+                      {
+                        "menuItem": {
+                          "id": "back_contactsMenu",
+                          "description": "<Назад",
+                          "answer": "Вы перешли в меню 'Контакты'",
+                          "callback_data": "contacts",
                           "menuItems": []
                         }
                       }
@@ -256,8 +255,17 @@
                 },
                 {
                   "menuItem": {
-                    "id": "contacts_mainMenu",
-                    "description": "Главное меню",
+                    "id": "link_c_6",
+                    "description": "Команда",
+                    "answer": "6",
+                    "callback_data": "https://telegra.ph/Komanda-02-03",
+                    "menuItems": []
+                  }
+                },
+                {
+                  "menuItem": {
+                    "id": "back_contacts_mainMenu",
+                    "description": "<Назад",
                     "answer": "Вы перешли в меню 'Главное меню'",
                     "callback_data": "main",
                     "menuItems": []
