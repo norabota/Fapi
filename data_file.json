@@ -2,28 +2,28 @@
   "menu": [
     {
       "menuItem": {
-        "id": "mainMenu",
+        "id": "root",
         "description": "Главное меню",
         "answer": "*Вы перешли в меню 'Главное меню'*",
-        "callback_data": "main",
+        "callback_data": "root",
         "menuItems": [
           {
             "menuItem": {
-              "id": "productsMenu",
+              "id": "root_products",
               "description": "Продукты",
               "answer": "Вы ||ffff|| перешли *в меню* 'Продукты'",
-              "callback_data": "products",
+              "callback_data": "root_products",
               "menuItems": [
                 {
                   "menuItem": {
-                    "id": "products_product_1",
+                    "id": "root_products_1",
                     "answer": "База кроссов состоит из базы автозапчастей артикулов оригинальных и неоригинальных запчастей, кросс\\-таблицы связей\\.\n\nБаза необходима для сайтов по продаже автозапчастей, внутренних систем учета \\(1С, собственные разработки\\), CRM\\. Собирается с 2015 года\\.",
-                    "callback_data": "product_1",
+                    "callback_data": "root_products_1",
                     "description": "База кроссов FAPI",
                     "menuItems": [
                       {
                         "menuItem": {
-                          "id": "link_product_1_baza_1",
+                          "id": "link1_root_products_1_about",
                           "description": "Подробнее",
                           "answer": "Вы перешли в меню 'База 1'",
                           "callback_data": "https://telegra.ph/Baza-krossov-FAPI-02-03",
@@ -32,10 +32,10 @@
                       },
                       {
                         "menuItem": {
-                          "id": "back_1_productsMenu",
+                          "id": "back1_root_products",
                           "description": "<Назад",
                           "answer": "Вы перешли в меню 'Продукты'",
-                          "callback_data": "products",
+                          "callback_data": "root_products",
                           "menuItems": []
                         }
                       }
@@ -44,14 +44,14 @@
                 },
                 {
                   "menuItem": {
-                    "id": "products_product_2",
+                    "id": "root_products_2",
                     "description": "Каталог  по маркам",
                     "answer": "Каталог автозапчастей по марке подключен у большинства крупных онлайн\\-ритейлеров: exist\\.ru, emex\\.ru и др\\. Его можно интегрировать не только на сайт, но и в учетные системы\\.\n\nКаталог позволяет подбирать автозапчасти по марке / модели / модификации автомобиля с последующим выводом дерева деталей\\.",
-                    "callback_data": "product_2",
+                    "callback_data": "root_products_2",
                     "menuItems": [
                       {
                         "menuItem": {
-                          "id": "link_product_2_baza_2",
+                          "id": "link_root_products_2_about",
                           "description": "Подробнее",
                           "answer": "Вы перешли в меню 'База 1'",
                           "callback_data": "https://telegra.ph/Katalog-avtozapchastej-po-marke-avtomobilya-02-03",
@@ -60,10 +60,10 @@
                       },
                       {
                         "menuItem": {
-                          "id": "back_2_productsMenu",
+                          "id": "back2_root_products",
                           "description": "<Назад",
                           "answer": "Вы перешли в меню 'Продукты'",
-                          "callback_data": "products",
+                          "callback_data": "root_products",
                           "menuItems": []
                         }
                       }
@@ -72,82 +72,82 @@
                 },
                 {
                   "menuItem": {
-                    "id": "products_product_3",
+                    "id": "root_products_3",
                     "description": "База фото автозапчастей",
                     "answer": "Вы перешли в меню 'База фото автозапчастей'",
-                    "callback_data": "product_3",
+                    "callback_data": "root_products_3",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "products_product_4",
+                    "id": "root_products_4",
                     "description": "Штрих-коды автозапчастей",
                     "answer": "Вы перешли в меню 'Штрих-коды автозапчастей'",
-                    "callback_data": "product_4",
+                    "callback_data": "root_products_4",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "products_product_5",
+                    "id": "root_products_5",
                     "description": "База артикулов автозапчастей",
                     "answer": "Вы перешли в меню 'База артикулов автозапчастей'",
-                    "callback_data": "product_5",
+                    "callback_data": "root_products_5",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "products_product_6",
+                    "id": "root_products_6",
                     "description": "1С: Автобизнес",
                     "answer": "Вы перешли в меню '1С: Автобизнес'",
-                    "callback_data": "product_6",
+                    "callback_data": "root_products_6",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "products_product_7",
+                    "id": "root_products_7",
                     "description": "API интеграция",
                     "answer": "Вы перешли в меню 'API интеграция'",
-                    "callback_data": "product_7",
+                    "callback_data": "root_products_7",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "products_product_8",
+                    "id": "root_products_8",
                     "description": "База кроссов онлайн",
                     "answer": "Вы перешли в меню 'База кроссов онлайн'",
-                    "callback_data": "product_8",
+                    "callback_data": "root_products_8",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "products_product_9",
+                    "id": "root_products_9",
                     "description": "База автовладельцев ВКонтакте",
                     "answer": "Вы перешли в меню 'База автовладельцев ВКонтакте'",
-                    "callback_data": "product_9",
+                    "callback_data": "root_products_9",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "products_product_10",
+                    "id": "root_products_10",
                     "description": "Фото логотипов автомобилей",
                     "answer": "Вы перешли в меню 'Фото логотипов автомобилей'",
-                    "callback_data": "product_10",
+                    "callback_data": "root_products_10",
                     "menuItems": []
                   }
                 },
                 {
                   "menuItem": {
-                    "id": "back_products_mainMenu",
+                    "id": "back_products_root",
                     "description": "<Назад",
                     "answer": "Вы перешли в меню 'Продукты'",
-                    "callback_data": "main",
+                    "callback_data": "root",
                     "menuItems": []
                   }
                 }
@@ -156,14 +156,14 @@
           },
           {
             "menuItem": {
-              "id": "downloadsMenu",
+              "id": "root_downloads",
               "description": "Скачать бесплатно",
               "answer": "Представленная база кроссов является бесплатной для загрузки\\. Информация собиралась за период с 2014 по 2017гг от производителей, крупных интернет\\-магазинов\\(exist, emex,mikado и др\\), вручную\\.\n\nМы также предоставляем и платную базу с более полной и актуальной информацией на текущую дату\\. Она пополняется каждую неделю\\.",
-              "callback_data": "downloads",
+              "callback_data": "root_downloads",
               "menuItems": [
                 {
                   "menuItem": {
-                    "id": "link_d_1",
+                    "id": "link1_root_downloads",
                     "description": "Подробнее",
                     "answer": "1",
                     "callback_data": "https://telegra.ph/Skachat-bazu-krossov-avtozapchastej-besplatno-02-03",
@@ -172,10 +172,10 @@
                 },
                 {
                   "menuItem": {
-                    "id": "back_downloads_mainMenu",
+                    "id": "back_downloads_root",
                     "description": "<Назад",
                     "answer": "Вы перешли в меню 'Главное меню'",
-                    "callback_data": "main",
+                    "callback_data": "root",
                     "menuItems": []
                   }
                 }
@@ -184,21 +184,21 @@
           },
           {
             "menuItem": {
-              "id": "contactsMenu",
+              "id": "root_contacts",
               "description": "Контакты",
               "answer": "Вы перешли в меню 'Контакты'",
-              "callback_data": "contacts",
+              "callback_data": "root_contacts",
               "menuItems": [
                 {
                   "menuItem": {
-                    "id": "contacts_links",
+                    "id": "root_contacts_links",
                     "answer": "Вы перешли в меню 'Ссылки'",
-                    "callback_data": "links",
+                    "callback_data": "root_contacts_links",
                     "description": "Email и Мессенджеры",
                     "menuItems": [
                       {
                         "menuItem": {
-                          "id": "link_c_1",
+                          "id": "link1_root_contacts_links",
                           "description": "*Email*",
                           "answer": "1",
                           "callback_data": "mailto:fapi@iisis.ru",
@@ -207,7 +207,7 @@
                       },
                       {
                         "menuItem": {
-                          "id": "link_c_2",
+                          "id": "link2_root_contacts_links",
                           "description": "Telegram",
                           "answer": "2",
                           "callback_data": "https://t.me/FapiSoftWare",
@@ -216,7 +216,7 @@
                       },
                       {
                         "menuItem": {
-                          "id": "link_c_3",
+                          "id": "link3_root_contacts_links",
                           "description": "Skype",
                           "answer": "3",
                           "callback_data": "https://join.skype.com/invite/odNlcw7RXIWj",
@@ -225,7 +225,7 @@
                       },
                       {
                         "menuItem": {
-                          "id": "link_c_4",
+                          "id": "link4_root_contacts_links",
                           "description": "WhatsApp",
                           "answer": "4",
                           "callback_data": "https://wa.me/79968004137",
@@ -234,8 +234,8 @@
                       },
                       {
                         "menuItem": {
-                          "id": "link_c_5",
-                          "description": "Контакты",
+                          "id": "link5_root_contacts_links",
+                          "description": "Viber",
                           "answer": "5",
                           "callback_data": "https://msng.link/o/?79968004137=vi",
                           "menuItems": []
@@ -243,10 +243,10 @@
                       },
                       {
                         "menuItem": {
-                          "id": "back_contactsMenu",
+                          "id": "back_root_contacts",
                           "description": "<Назад",
                           "answer": "Вы перешли в меню 'Контакты'",
-                          "callback_data": "contacts",
+                          "callback_data": "root_contacts",
                           "menuItems": []
                         }
                       }
@@ -255,7 +255,7 @@
                 },
                 {
                   "menuItem": {
-                    "id": "link_c_6",
+                    "id": "link1_root_contacts_team",
                     "description": "Команда",
                     "answer": "6",
                     "callback_data": "https://telegra.ph/Komanda-02-03",
@@ -264,10 +264,10 @@
                 },
                 {
                   "menuItem": {
-                    "id": "back_contacts_mainMenu",
+                    "id": "back_contacts_root",
                     "description": "<Назад",
                     "answer": "Вы перешли в меню 'Главное меню'",
-                    "callback_data": "main",
+                    "callback_data":"root",
                     "menuItems": []
                   }
                 }
