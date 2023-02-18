@@ -16,7 +16,7 @@ async def on_startup(_):
 @dp.message_handler(commands=['start'])
 async def command_start(message: types.Message):
     inline_menu = nav.menu_commands('start')
-    print(inline_menu)
+    print(1,inline_menu)
     await bot.send_message(message.from_user.id,
                            '.           Здравствуйте, {0.first_name}!         .'.format(message.from_user),
                            reply_markup=inline_menu["submenu"])
