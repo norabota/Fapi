@@ -12,7 +12,7 @@ async def __on_start_up(dp: Dispatcher) -> None:
     register_all_filters(dp)
     register_all_handlers(dp)
     register_models()
-    print('Бот успешно запущен!')
+    print('Бот успешно запущен !')
 
 
 def start_bot():
