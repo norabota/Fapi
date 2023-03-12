@@ -1,11 +1,22 @@
 from aiogram import Dispatcher
 from aiogram.types import Message, CallbackQuery
 from bot.keyboards import menu_inline, menu_commands
+from bot.database.models.main import create_db, DBCommands
 
+db = DBCommands()
 
 async def command_start(message: Message):
     inline_menu = menu_commands('start')
     print(1, inline_menu)
+    await create_db()
+
+    chat_id = message.from_user.id
+    referral = message.get_args()
+    user = await db.add_new_user(referral=referral)
+    id = user.id
+    count_users = await db.count_users()
+    print(count_users)
+    print(id)
     await message.bot.send_message(message.from_user.id,
                                    '.           Здравствуйте, {0.first_name}!         .'.format(message.from_user),
                                    reply_markup=inline_menu["submenu"])
