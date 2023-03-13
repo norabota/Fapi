@@ -1,6 +1,7 @@
 from aiogram.utils import executor
 from aiogram import Bot, Dispatcher
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
+from aiogram import types
 
 from bot.filters import register_all_filters
 from bot.misc import TgKeys
@@ -19,6 +20,11 @@ async def __on_start_up(dp: Dispatcher) -> None:
     register_models()
     logging.info('Start bot')
     print('Бот успешно запущен !')
+    await dp.bot.set_my_commands(
+        [
+            types.BotCommand('start', 'Запустить бота'),  # пока добавляем только одну команду
+        ]
+    )
 
 
 def start_bot():
