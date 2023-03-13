@@ -35,11 +35,11 @@ def createInlineKeyboardButtons(msg_answer, menu_items):
     for item in menu_items:
         if item["menuItem"]["id"].startswith('link'):
             button = InlineKeyboardButton(text=item["menuItem"]["description"],
-                                     url=item["menuItem"]["callback_data"])
+                                          url=item["menuItem"]["callback_data"])
             list_buttons.append(button)
         else:
             button = InlineKeyboardButton(text=item["menuItem"]["description"],
-                                     callback_data=item["menuItem"]["callback_data"])
+                                          callback_data=item["menuItem"]["callback_data"])
             list_buttons.append(button)
     if list_buttons:
         return {"answer": msg_answer, "submenu": InlineKeyboardMarkup(row_width=1).add(*list_buttons)}
