@@ -1,5 +1,6 @@
 from aiogram import types, Bot
 from gino import Gino
+import datetime
 from gino.schema import GinoSchemaVisitor
 from sqlalchemy import (Column, Integer, BigInteger, String,
                         Sequence, TIMESTAMP, Boolean, JSON)
@@ -21,7 +22,7 @@ class User(db.Model):
 
     id = Column(Integer, Sequence('user_id_seq'), primary_key=True)
     user_id = Column(BigInteger)
-    language = Column(String(2))
+    time = Column(TIMESTAMP)
     full_name = Column(String(100))
     username = Column(String(50))
     referral = Column(Integer)
@@ -78,6 +79,7 @@ class DBCommands:
         new_user.user_id = user.id
         new_user.username = user.username
         new_user.full_name = user.full_name
+        new_user.time = datetime.datetime.now()
 
         if referral:
             new_user.referral = int(referral)

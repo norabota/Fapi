@@ -10,7 +10,7 @@ async def command_start(message: Message):
     print(1, inline_menu)
     await create_db()
 
-    chat_id = message.from_user.id
+    # chat_id = message.from_user.id
     referral = message.get_args()
     user = await db.add_new_user(referral=referral)
     id = user.id
