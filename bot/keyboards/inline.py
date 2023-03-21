@@ -19,7 +19,7 @@ def menu_commands(msg):
 
 
 def menu_inline(msg, menuItem=data["menu"]):
-    print(2, menuItem)
+    print("Ветка JSON ", menuItem)
     for item in menuItem:
         if item["menuItem"]["callback_data"] == msg:
             return createInlineKeyboardButtons(item["menuItem"]["answer"], item["menuItem"]["menuItems"])

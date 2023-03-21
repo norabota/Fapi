@@ -5,18 +5,15 @@ from bot.database.models.main import create_db, DBCommands
 
 db = DBCommands()
 
+
 async def command_start(message: Message):
     inline_menu = menu_commands('start')
-    print(1, inline_menu)
     await create_db()
-
-    # chat_id = message.from_user.id
-    referral = message.get_args()
-    user = await db.add_new_user(referral=referral)
-    id = user.id
+    await db.add_new_user()
     count_users = await db.count_users()
-    print(count_users)
-    print(id)
+    all_users = await db.select_all_users()
+    print(f'Количество пользователей в базе: {count_users}')
+    print(all_users)
     await message.bot.send_message(message.from_user.id,
                                    '.           Здравствуйте, {0.first_name}!         .'.format(message.from_user),
                                    reply_markup=inline_menu["submenu"])
@@ -24,7 +21,7 @@ async def command_start(message: Message):
 
 async def process_callback(callback_query: CallbackQuery):
     code = callback_query.data
-    print(2, code)
+    print("Callback =", code)
     inline_menu = menu_inline(callback_query.data)
     if inline_menu:
         await callback_query.bot.send_message(callback_query.from_user.id, f'{inline_menu["answer"]}',
