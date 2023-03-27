@@ -14,15 +14,15 @@ except Exception as err:
 
 def menu_commands(msg):
     if msg == 'start':
-        return createInlineKeyboardButtons(data["menu"][0]["menuItem"]["answer"],
-                                           data["menu"][0]["menuItem"]["menuItems"])
+        return create_inline_keyboard_buttons(data["menu"][0]["menuItem"]["answer"],
+                                              data["menu"][0]["menuItem"]["menuItems"])
 
 
-def menu_inline(msg, menuItem=data["menu"]):
-    print("Ветка JSON ", menuItem)
-    for item in menuItem:
+def menu_inline(msg, menu_item=data["menu"]):
+    print("Ветка JSON ", menu_item)
+    for item in menu_item:
         if item["menuItem"]["callback_data"] == msg:
-            return createInlineKeyboardButtons(item["menuItem"]["answer"], item["menuItem"]["menuItems"])
+            return create_inline_keyboard_buttons(item["menuItem"]["answer"], item["menuItem"]["menuItems"])
         else:
             menu = menu_inline(msg, item["menuItem"]["menuItems"])
             if menu is not None:
@@ -30,7 +30,7 @@ def menu_inline(msg, menuItem=data["menu"]):
     return None
 
 
-def createInlineKeyboardButtons(msg_answer, menu_items):
+def create_inline_keyboard_buttons(msg_answer, menu_items):
     list_buttons = []
     for item in menu_items:
         if item["menuItem"]["id"].startswith('link'):

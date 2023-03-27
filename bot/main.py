@@ -7,14 +7,20 @@ from bot.filters import register_all_filters
 from bot.misc import TgKeys
 from bot.handlers import register_all_handlers
 from bot.database.models import register_models
+from bot.database.models.main import create_db
 
 import logging
+
+logging.basicConfig(level=logging.INFO)
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',
                     level=logging.INFO,
                     filename='bot.log'
                     )
+
+
 async def __on_start_up(dp: Dispatcher) -> None:
+    await create_db()
     register_all_filters(dp)
     register_all_handlers(dp)
     register_models()

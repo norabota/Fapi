@@ -1,19 +1,14 @@
 from aiogram import Dispatcher
 from aiogram.types import Message, CallbackQuery
 from bot.keyboards import menu_inline, menu_commands
-from bot.database.models.main import create_db, DBCommands
+from bot.database.models.main import DBCommands
 
 db = DBCommands()
 
 
 async def command_start(message: Message):
     inline_menu = menu_commands('start')
-    await create_db()
     await db.add_new_user()
-    count_users = await db.count_users()
-    all_users = await db.select_all_users()
-    print(f'Количество пользователей в базе: {count_users}')
-    print(all_users)
     await message.bot.send_message(message.from_user.id,
                                    '.           Здравствуйте, {0.first_name}!         .'.format(message.from_user),
                                    reply_markup=inline_menu["submenu"])
@@ -32,6 +27,6 @@ async def process_callback(callback_query: CallbackQuery):
 
 
 def register_other_handlers(dp: Dispatcher) -> None:
-    # todo: register all other handlers
+    # todo: register all handlers
     dp.register_message_handler(command_start, commands=['start'])
     dp.register_callback_query_handler(process_callback, lambda call: True)

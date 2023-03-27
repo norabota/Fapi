@@ -5,6 +5,7 @@ from gino.schema import GinoSchemaVisitor
 from sqlalchemy import (Column, Integer, BigInteger, String,
                         Sequence, TIMESTAMP, )
 from sqlalchemy import sql
+
 from bot.misc import TgKeys
 
 db_pass = TgKeys.DB_PASS
@@ -50,14 +51,6 @@ class DBCommands:
         new_user.time = datetime.datetime.now()
         await new_user.create()
         return new_user
-
-    async def count_users(self) -> int:
-        total = await db.func.count(User.id).gino.scalar()
-        return total
-
-    async def select_all_users(self):
-        users = await User.query.gino.all()
-        return users
 
 
 async def create_db():
